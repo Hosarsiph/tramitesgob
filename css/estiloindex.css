@@ -1,0 +1,125 @@
+.latest-process .container {
+	border-bottom: 3px solid #0F78A9;
+	padding: 40px 0;
+}
+
+.latest-process {
+	font-size: 15px;
+	line-height: 19px;
+	margin-bottom: 40px;
+}
+
+h1, h2 {
+	font-size: 32px;
+	line-height: 36px;
+	font-weight: 700;
+}
+
+.latest-process a {
+	font-size: 20px;
+	line-height: 24px;
+	text-decoration: underline;
+	font-weight: 500;
+}
+
+
+.fl_left {
+  width: 100%;
+  min-width: 200px;
+  max-width: 450px;
+  position: relative;
+  left: 0px;
+  float: left;
+  top: 0px;
+
+}
+
+/* Estilo infomación del tramite beca*/ 
+
+.single_page .summary {
+	width: 655px;
+	float: left;
+}
+
+.single_page .sidebar {
+	width: 285px;
+	float: right;
+}
+
+.blue_btn.full {
+	width: 100%;
+}
+
+.blue_btn {
+	padding: 0 25px;
+	height: 38px;
+	line-height: 38px;
+	outline: none !important;
+	border: none;
+	font-size: 14px;
+	text-decoration: none;
+	position: relative;
+	border: none;
+	background: #0F78A9;
+	color: #FFF !important;
+	display: inline-block;
+}
+
+.page_header {
+	border-bottom: 1px solid #EEE;
+	padding-bottom: 5px;
+}
+
+.permit_costs .wrap {
+	border: 1px solid #DDD;
+	padding: 12px 40px 20px 40px;
+}
+
+.permit_costs .wrap thead {
+	font-weight: 700;
+}
+
+.single_page .summary>div {
+	margin-bottom: 40px;
+}
+
+.permit_availability {
+	background: #F9F9F9;
+	border: 1px solid #DDD;
+	padding: 20px;
+}
+
+.permit_availability .wrap>div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+/* estilo formulario beca*/
+
+select {
+width: auto;
+max-width: 100%;
+padding: 0.3em;
+background-color: #fff;
+border: 1px solid #ccc;
+}
+
+#oferta, #maestria, #doctorado {
+position: relative;
+left: 20px;
+}
+
+#vigencia {
+  position: relative;
+  float: left;
+  left: -450px;
+  top: 100px;
+}
+
+
+.btn.btn-common {
+	background: #fff;
+	border-color: #ddd;
+	color: #737579;
+}

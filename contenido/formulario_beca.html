@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Formulario Beca</title>
+    <meta charset="utf-8">
+
+    <!-- Soporte para usar HTML5 en IE8 -->
+    <!--[if lt IE 9]><script src="../js/vendor/html5.js"></script><![endif]-->
+
+    <!-- CSS -->
+    <link href="../css/gobmx.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!-- Header -->
+      <header class="gobmx-header">
+    <div class="network-nav">
+      <div class="container">
+        <div class="logo">
+          <a href="http://alfa.gob.mx/">
+            <img alt="Gob.mx" src="../images/gobmx/logos/gobmx-top.png">
+          </a>
+        </div>
+       
+        <nav>
+          <ul>
+            <li>
+              <a href="http://www.centrogeo.org.mx/es/" target="_blank">CentroGEO</a>
+            </li>
+            <li>
+              <a class="current" href="http://www.gob.mx/" target="_blank">Trámites y Servicios</a>
+            </li>
+          </ul>
+        </nav>
+      
+      </div>
+    </div>
+    <div class="top-nav">
+      <div class="container">
+        <!--
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Otro enlace 1</a>
+            </li>
+            <li>
+              <a href="#">Otro enlace 2</a>
+            </li>
+            <li>
+              <a href="#">Otro enlace 3</a>
+            </li>
+          </ul>
+        </nav>
+        -->
+      </div>
+    </div>
+  </header>
+
+  <link href="../css/estiloindex.css" rel="stylesheet">
+
+  <div id="page-content" class="container">
+  <div class="body-form"> 
+
+    <div class="panel-heading" id="cabecera" STYLE="background-color:#EEEEEE">  
+      <h2 align="center"><b>Centro de Investigación en Geografía y Geomática "Ing. Jorge L. Tamayo", A.C.</b></h2>
+    </div>
+
+
+    <h2 align="center">Programa de Financiamiento de Becas</h2>
+    <div class="panel-heading" STYLE="background-color:#EEEEEE">
+    <h4 align="center"></h4>
+    </div>
+
+  <script language="JavaScript" type="text/javascript" src="ajax.js"></script>
+  <form name="nuevo_registro" action="registro.php" onsubmit="enviarDatosBeca(); return false" method="post">
+  <!--<form role= "form" id="upload_form" name="nuevo_registro" method="post" enctype="multipart/form-data" action="" onsubmit="enviarDatosBeca(); return false">-->
+
+  <div id = "div01" class="panel panel-default">
+    <div class="panel-body">          
+        <div class="form-group">
+          <label class="control-label" for="homotramite">Homoclave del Trámite:</label>
+          <input class="form-control" name="homoclave" id="homotramite" placeholder="CIGGET-90A-02" type="text" disabled>
+        </div>  
+        <!--
+        <div class="form-group">
+          <label class="control-label" for="fechaDOF">*Fecha de publicación del formato en el DOF:</label>
+          <input class="form-control" name="fechadof" id="fechaDOF" placeholder="Fecha de publicación DOF" type="date">
+        </div>
+        -->
+    </div>
+  </div>
+
+  <div id = "div02" class="panel panel-default">
+    <div class="panel-body">  
+     <!--
+      <div class="form-group">
+        <label class="control-label" for="folio">Folio:</label>
+        <input class="form-control" id="folio" placeholder="folio" type="text">
+      </div>
+      -->
+      <div class="form-group">
+        <label class="control-label" for="fechatramite">Fecha de solicitud de tramite:</label>
+        <input class="form-control" name="fechatramite" id="fechatramite" placeholder="fecha de solicitud del tramite" type="date">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel-heading" STYLE="background-color:#FFFFFF">
+    <h4 align="center">Datos Generales del Solicitante</h4>
+  </div>
+  
+  
+  <div id = "div03" class="panel panel-default">
+    <div class="panel-body">  
+      <div class="form-group">
+        <label class="control-label" for="curp">CURP:</label>
+        <input class="form-control" name="curp" id="curp" placeholder="curp" type="text">
+      </div>
+
+      
+      <div class="form-group">
+        <label class="control-label" for="nombre">Nombre(s):</label>
+        <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text">
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="primerApelli">Primer Apellido:</label>
+        <input class="form-control" name="appaterno" id="primeApelli" placeholder="Apellido Paterno" type="text">
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="segunApelli">Segundo Apellido:</label>
+        <input class="form-control" name="apmaterno" id="segunApelli" placeholder="Apellido Materno" type="text">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div id = "div04" class="panel panel-default">
+    <div class="panel-body">   
+      <div class="form-group">
+        <label class="control-label" for="telefono">Teléfono (lada y número):</label>
+        <input class="form-control" name="telefono" id="telefono" placeholder="Teléfono de casa" type="text">
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="extencion">Extensión:</label>
+        <input class="form-control" name="extension" id="extencion" placeholder="Extension" type="text">
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="celular">Teléfono móvil:</label>
+        <input class="form-control" name="telefonomovil" id="celular" placeholder="Teléfono celular" type="text">
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="email">Correo electrónico:</label>
+        <input class="form-control" name="email" id="email" placeholder="ejemplo: nombre@gmail.com" type="text">
+      </div>
+    </div>
+  </div>
+  
+  <div class="panel-body">
+  <div class="panel-heading" STYLE="background-color:#EEEEEE">
+    <h4 align="center">Domicilio del Solicitante</h4>
+  </div>  
+
+  <div id= "div05" class="panel panel-default">
+    <div class="panel-body">  
+      <div class="form-group">
+        <label class="control-label" for="tipoViali">Tipo de vialidad:</label>
+        <input class="form-control" name="vialidad" id="tipoViali" placeholder="(Ej. Avenida, Boulevard, Calle, Carretera, Camino, Privada, Terracería, etc)" type="text">
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="nombreCalle">Nombre de la calle:</label>
+        <input class="form-control" name="calle" id="nombreCalle" placeholder="nombre de la calle" type="text">
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="numExte">Número exterior:</label>
+        <input class="form-control" name="numeroexte" id="numExte" placeholder="número exterior" type="text">
+      </div>
+        <div class="form-group">
+        <label class="control-label" for="numInte">Número interior:</label>
+        <input class="form-control" name="numeinte" id="numInte" placeholder="número interior" type="text">
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="codPostal">Código postal:</label>
+        <input class="form-control" name="codigopostal" id="codPostal" placeholder="código postal" type="text">
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="nombColonia">Nombre de la colonia o asentamiento humano:</label>
+        <input class="form-control" name="colonia" id="nombColonia" placeholder="nombre de la colionia" type="text">
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label" for="nombMuni">Nombre del Municipio o Delegación:</label>
+        <input class="form-control" name="municipio" id="nombMuni" placeholder="nombre del municipio" type="text">
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="nombEstado">Nombre del Estado o Distrito Federal:</label>
+        <input class="form-control" name="estado" id="nombEstado" placeholder="nombre del Estado o Distrito Federal" type="text">
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="panel-body">
+    <div id= "divhd" class="panel-heading" STYLE="background-color:#EEEEEE">
+      <h4 align="center">Información del Trámite</h4>
+    </div>
+
+  <!--Hasta aqui esta corregida identación-->
+  <div id="div06" class="panel panel-default">
+    <div class="panel panel-default">
+    <div class="panel-heading" align="center">Nivel del posgrado en GEOMÁTICA para el que solicita BECA</div>
+      <div class="panel-body">        
+      
+          <div class="form-group">
+            <label class="control-label" for="tipoBeca">Tipo de Beca:</label>
+            <br>
+            <label> Manutención
+            <input type="checkbox" value="manutencion" name="tipobeca"> 
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="cicloescolar">Ciclo Escolar</label>
+            <input class="form-control" name="cicloescolar" id="cicloEscolar" placeholder="ciclo escolar" type="text">
+          </div>
+
+          <div class="form-group">
+            <label>Propedéutico
+            <input type="checkbox" value="propedeutico" name="propedeutico"> 
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>Especialidad
+            <input type="checkbox" value="especialidad" name="especialidad"> 
+            </label> 
+          </div>
+      </div> 
+
+
+        
+
+      <div class="form-group">
+        <script type="text/javascript">
+              function mostrar(id) {
+
+                if (id == "escoje") {
+                  $("#maestria").hide();
+                  $("#doctorado").hide();
+                 
+                  
+
+                }
+                
+                if (id == "maestria") {
+                  $("#maestria").show();
+                  $("#doctorado").hide();
+                
+                  
+
+                }
+                
+                if (id == "doctorado") {
+                  $("#maestria").hide();
+                  $("#doctorado").show();
+                
+                  
+                }
+                
+              }
+
+          </script>
+
+            <style type="text/css">
+              .element {
+                    min-height: 100px;
+                    width: 450px;
+                    box-shadow: 0 2px 5px #666666;
+                    padding: 10px;
+                    margin-top:5px;
+
+                }
+
+            </style>
+
+          </br>
+              <div id="oferta">
+                
+                  <!--<label for = "oferta_educativa">Oferta Educativa</label>-->
+                  <select id="status" name="status" onChange="mostrar(this.value);">
+                      <option value = "escoje">Selecciona Oferta Educativa</option>
+                      <option value="maestria">Maestría</option>
+                      <option value="doctorado">Doctorado</option>
+                   </select>
+                 
+              </div>
+
+              <div id="maestria" class="element" style="display: none;">
+                <h2>Maestría:</h2>
+                </br>
+                    
+                                <div class="form-group">
+                                
+            <label class="control-label" for="maestria">Maestría:</label>       
+                      <label>
+                      <input type="radio" name="maestria" value="1er anioM"> 1er año
+                      </label>
+                      <label>
+                      <input type="radio" name="maestria" value="2do anioM"> 2do año
+                      </label>
+             </label>
+             
+          </div>
+                      
+              </div>
+
+
+                <div id="doctorado" class="element" style="display: none;">
+                  <h2>Doctorado:</h2>
+                    
+                          <div class="form-group">
+                <label class="control-label" for="doctorado">Doctorado:</label>
+                <label>
+                          <input type="radio" name="doctorado" value="1er anioD"> 1er año
+                          </label>
+                          <label>
+                          <input type="radio" name="doctorado" value="2do anioD"> 2do año
+                          </label>
+                          <label>
+                          <input type="radio" name="doctorado" value="3er anioD"> 3er año
+                          </label>
+                          <label>
+                          <input type="radio" name="doctorado" value="4to anioD"> 4to año
+                </label>
+          </div>  
+                    
+                </div> 
+      </div>
+    
+
+    <div  class="panel panel-default">
+    <div class="panel-heading" align="center">Situación financiera</div>
+      <div class="panel-body">
+
+      <div class="form-group">
+        <label class="control-label">Tiene el beneficio de beca de otra institución u organismo:
+        </label>
+       
+        <label>
+          <input type="radio" name="otrabeca" value="1" checked="checked"> Si
+        </label>
+        <label>
+          <input type="radio" name="otrabeca" value="0" checked="checked"> No
+        </label>  
+      </div>
+
+      <div class="form-group">
+        <label class="control-label">Tiene otros ingresos</label>
+       
+          <label>
+        <input type="radio" name="otroingreso" value="1" checked="checked"> Si
+        </label>
+        <label>
+          <input type="radio" name="otroingreso" value="0" checked="checked"> No
+        </label>
+      </div>
+     
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+
+
+<div id="divhd" class="panel-heading" STYLE="background-color:#EEEEEE">
+    <h4 align="center">Comité de Becas CentroGeo</h4>
+</div>
+
+
+<div id="div06">
+<div id = "domicilio" class="panel panel-default">
+  <div class="panel-body">
+
+  <div class="form-group">
+    <label class="control-label" for="observaciones">Observaciones:</label>
+    <textarea class="form-control" placeholder="Observaciones" name="observaciones" rows="3"></textarea>
+  </div> 
+ 
+  </div>
+</div>
+<button type="submit" name="Submit" value="Enviar" class="btn btn-primary">Enviar solicitud</button> 
+</div> 
+</form>
+<div id="resultado"><?php include('consulta.php');?></div>
+
+<div class="panel-body"></div>
+<div id="divhd" class="panel-heading" STYLE="background-color:#EEEEEE"><h4 align="center">Terminos y Condiciones</h4></div>
+
+
+    <div id = "divhd" class="panel panel-default">
+      <div class="panel-body">
+          <h6 align="center"><strong>Requisitos para optar y, en su caso, obtener una beca CentroGeo:</strong></h6>
+          <br>    
+          <strong>1.</strong>  Ser ciudadano mexicano, o extranjero con calidad migratoria que le permita realizar estudios en el país, y permanecer el plazo necesario para terminar los estudios correspondientes.
+          <br>
+          <strong>2.</strong>  Los aspirantes a obtener una beca del CentroGeo para el posgrado deberán de cumplir con los requisitos de ingreso establecidos en los Planes de Estudio de cada nivel. 
+          <br>
+          <strong>3.</strong>  En todos los casos deberán contar con el dictamen de aceptación oficial del Comité del Programa de Posgrado, mismo que estará asentado en el Acta del Comité del Programa de Posgrado correspondiente.
+          <br>
+          <strong>4.</strong>  Los aspirantes a obtener una beca de manutención para el curso propedéutico deberán de cumplir con los requisitos de ingreso establecidos en el Plan de Estudios de la Especialización, salvo en lo concerniente a estar recibidos (Título profesional o equivalente) que en este caso podrán ser pasantes y al nivel de conocimiento del idioma inglés, que deberán presentar antes de su entrevista con miras a su aceptación en la Especialización con el nivel que determine, en su oportunidad, el Comité del Programa de Posgrado.
+          <br>
+          <strong>5.</strong>  Las copias de la documentación oficial que entreguen los estudiantes será cotejada por personal de la Coordinación de Posgrado, quién firmará al calce de cada copia de documento que el mismo fue cotejado contra el original.
+          <br>
+          <strong>6.</strong>  Para el otorgamiento de becas que no sean del posgrado los postulantes deberán presentar la documentación y cumplir con las condiciones establecidas en la convocatoria y/o el proyecto particular del que salgan los recursos para su otorgamiento.
+          <br>
+          <strong>7.</strong>  La documentación comprobatoria de los requisitos quedará resguardada en el expediente del alumno, ya sea en por la Coordinación de Posgrado y/o por el Coordinador del Proyecto que financie la beca.
+          <br>
+          <strong> 8.</strong>  La Dirección de Administración de CentroGeo contará con copia fotostática de la documentación que requiera para la elaboración de los contratos correspondientes.
+          <br>
+          <strong>9.</strong>  No tener el beneficio de beca de otra institución u organismo.
+
+          <br>
+          <h6 align="center"><strong>Obligaciones de los becarios CentroGeo:</strong></h6>
+          <br>
+          <strong>1.</strong>  Suscribir la documentación que formaliza la beca dentro de los plazos previstos.
+          <br>
+          <strong>2.</strong>  Para alumnos del propedéutico o del posgrado en CentroGeo la dedicación exclusiva al programa (tiempo completo) en el que esté matriculado. 
+          <br>
+          <strong>3.</strong>  Informar de la obtención de algún apoyo económico adicional al otorgado por CentroGeo.
+          <br>
+          <strong>4.</strong>  En el posgrado, mantener calificaciones con un promedio mínimo de 8.0
+          <br>
+          <strong>5.</strong>  En las becas para la realización de tesis de licenciatura, maestría o doctorado, proporcionar a la Coordinación de Posgrado o al del 
+          Proyecto, según sea el caso, informes semestrales sobre el desarrollo de su trabajo de tesis, avalado por su tutor, en no más de dos cuartillas.
+          <br>
+          <strong>6.</strong>  Cumplir con el objeto para el cual se le otorgó la beca.
+          <br>
+          <strong>7.</strong>  Otorgar el crédito correspondiente a CentroGeo como titular de los derechos de autor en su aspecto patrimonial, respecto de los trabajos de investigación, artículos y tesis resultantes de los estudios que fueron apoyados por la beca.
+          <br>
+          <strong>8.</strong>  Entregar a la Coordinación de Posgrado una copia de los artículos o publicaciones científicas que hayan sido elaborados como becario del CentroGeo.
+          <br>
+          <strong>9.</strong>  Informar de manera inmediata a CentroGeo cuando el término del trabajo de tesis o la obtención del grado se efectúe antes del término de la vigencia de la beca.
+          <br>
+          <strong>10.</strong> Las demás que establezca este reglamento, el contrato suscrito entre ambas partes y otras disposiciones aplicables.
+          <br>
+          <em>*De conformidad con los artículos 4 y 69-M, fracción V, los formatos para solicitar trámites y servicios deberán publicarse en el Diario Oficial de la Federación (DOF).</em>
+      </div>
+    </div>
+
+    <div class="fl_left vmiddle" style="margin-top: 22.5px; visibility: visible;">
+        <a href="javascript:history.back(1);" class="btn btn-medium btn-common fluid">« Regresar</a>
+    </div>
+
+</div>
+</div>
+
+<br>
+
+  <!-- 
+  #########Aqui termina la programación del contenido##########
+  #########y comienza el footer de la página##############
+   -->
+
+  <footer class="gobmx-footer">
+    <div class="container">
+      <div class="contact-methods">
+        <div class="way about">
+          <div class="wrap">
+            <div class="logo">
+              <a href="http://alfa.gob.mx/">
+                <img alt="Gob.mx" src="../images/gobmx/logos/gobmx-bottom.png">
+              </a>
+            </div>
+            <p>Gob.mx es el portal único del gobierno que<br />puedes consultar a cualquier hora, desde<br />cualquier lugar, en cualquier dispositivo.</p>
+            <p class="privacy">
+              <a href="http://alfa.gob.mx/terminos-y-condiciones">Términos y condiciones</a>
+            </p>
+          </div>
+        </div>
+        <div class="way">
+          <div class="wrap">
+            <h3>Descarga la app</h3>
+            <ul>
+              <li>
+                <a class="apple" href="#">App Store</a>
+              </li>
+              <li>
+                <a class="google" href="#">Google Play</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="way">
+          <div class="wrap">
+            <h3>Redes sociales</h3>
+            <ul>
+              <li>
+                <a class="fb" href="https://facebook.com/gobmx" target="_blank">Facebook</a>
+              </li>
+              <li>
+                <a class="tw" href="https://twitter.com/gobmx_beta" target="_blank">Twitter</a>
+              </li>
+              <li>
+                <a class="yt" href="http://www.youtube.com/gobiernorepublicamx" target="_blank">Youtube</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="way">
+          <div class="wrap">
+            <h3>Contacto</h3>
+            <p>
+              Insurgentes Sur 1735, Col. Guadalupe Inn.
+              <br>
+              Delegación Álvaro Obregón
+              <br>
+              México, D.F.
+              <br>
+              C.P. 01020
+            </p>
+            <p>
+              <a class="email" href="http://alfa.gob.mx/contacto">Envíanos un email</a>
+              <br>
+              <strong>Local:</strong>
+              5174-8160
+              <br>
+              <strong>Lada sin costo:</strong>
+              <br>
+              01-800-839-1974
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-nav">
+        <div>
+          <div class="logo">
+            <a href="http://www.presidencia.gob.mx/" target="_blank">
+              <img alt="México - Gobierno de la República" src="../images/gobmx/logos/presidencia-bottom.png">
+            </a>
+          </div>
+          <div class="logo">
+            <a href="http://www.cofemer.gob.mx/" target="_blank">
+              <img alt="COFEMER" src="../images/gobmx/logos/cofemer-bottom.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <!-- JS -->
+    <script src="../js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="../js/vendor/bootstrap.js"></script>
+
+  </body>
+</html>
