@@ -123,3 +123,8 @@ left: 20px;
 	border-color: #ddd;
 	color: #737579;
 }
+
+.list {
+	margin-right: -15px;
+	margin-left: 39px;
+}

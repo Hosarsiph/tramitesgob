@@ -1,13 +1,16 @@
 <?php
- 
+
 //Configuracion de la conexion a base de datos
   $bd_host = "localhost"; 
   $bd_usuario = "root"; 
   $bd_password = "archie"; 
   $bd_base = "tramitesgeo"; 
  
+
 $con = mysql_connect($bd_host, $bd_usuario, $bd_password); 
 mysql_select_db($bd_base, $con); 
+
+header("Content-Type: text/html;charset=utf-8");
  
 //variables POST
   $fechatramite  = $_POST['fechatramite'];
@@ -43,4 +46,6 @@ mysql_select_db($bd_base, $con);
 mysql_query($sql,$con) or die('Error. '.mysql_error());
  
 include('consulta.php');
+
+
 ?>

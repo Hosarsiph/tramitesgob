@@ -17,7 +17,9 @@ body {
  * -------------------------
 */
 .page {
-  margin-top: 30px; }
+  margin-top: 30px; 
+  margin-left: 10px;
+}
   .page .container {
     padding: 0;
     max-width: 1200px;
@@ -197,7 +199,8 @@ a {
   border: 1px solid #dddddd;
   border-top: 0;
   padding: 15px; }
-  .tab-content > .tab-pane > p:last-child, .tab-content > .tab-pane > ul:last-child, .tab-content > .tab-pane > ol:last-child, .tab-content > .tab-pane > blockquote:last-child, .tab-content > .tab-pane > .form-control:last-child, .tab-content > .tab-pane > .table:last-child, .tab-content > .tab-pane > .navbar:last-child, .tab-content > .tab-pane > .jumbotron:last-child, .tab-content > .tab-pane > .alert:last-child, .tab-content > .tab-pane > .panel:last-child, .tab-content > .tab-pane > .list-group:last-child, .tab-content > .tab-pane > .well:last-child, .tab-content > .tab-pane > .progress:last-child, .tab-content > .tab-pane > .progress:last-child, .tab-content > .tab-pane > .page:last-child, .tab-content > .tab-pane > .page > .container > *:last-child,
+  .tab-content > .tab-pane > p:last-child, .tab-content > .tab-pane > ul:last-child, .tab-content > .tab-pane > ol:last-child, .tab-content > .tab-pane > blockquote:last-child, .tab-content > .tab-pane > .form-control:last-child, .tab-content > .tab-pane > .table:last-child, .tab-content > .tab-pane > .navbar:last-child, .tab-content > .tab-pane > .jumbotron:last-child, .tab-content > .tab-pane > .alert:last-child, .tab-content > .tab-pane > .panel:last-child, .tab-content > .tab-pane > 
+  .list-group:last-child, .tab-content > .tab-pane > .well:last-child, .tab-content > .tab-pane > .progress:last-child, .tab-content > .tab-pane > .progress:last-child, .tab-content > .tab-pane > .page:last-child, .tab-content > .tab-pane > .page > .container > *:last-child,
   .tab-content > .tab-pane form > .form-group:last-child,
   .tab-content > .tab-pane form > .help-block:last-child,
   .tab-content > .tab-pane .form-group > .help-block:last-child, .tab-content > .tab-pane > .table-responsive:last-child > .table {
