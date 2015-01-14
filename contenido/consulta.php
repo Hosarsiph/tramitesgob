@@ -103,6 +103,90 @@
 		$pdf->SetXY(80, 136);
 		$pdf->Cell(15, 6, utf8_decode('Domicilio del Solicitante'), 0 , 1);
 
+		$pdf->SetXY(15, 145);
+		$pdf->Cell(15, 6, utf8_decode('Tipo de Vialidad:'), 0 , 1);
+		$pdf->SetXY(48, 145);
+		$pdf->Cell(15,6, utf8_decode($vialidad));
+
+		$pdf->SetXY(15, 155);
+		$pdf->Cell(15, 6, utf8_decode('Nombre de la Vialidad:'), 0 , 1);
+		$pdf->SetXY(57, 155);
+		$pdf->Cell(15,6, utf8_decode($calle));
+
+		$pdf->SetXY(15, 165);
+		$pdf->Cell(15, 6, ('Colonial:'), 0 , 1);
+		$pdf->SetXY(32, 165);
+		$pdf->Cell(15,6, utf8_decode($colonia));
+
+		$pdf->SetXY(15, 175);
+		$pdf->Cell(15, 6, ('Delegacion o Municipio:'), 0 , 1);
+		$pdf->SetXY(59, 175);
+		$pdf->Cell(15,6, utf8_decode($municipio));
+
+		$pdf->SetXY(15, 185);
+		$pdf->Cell(15, 6, ('Estado:'), 0 , 1);
+		$pdf->SetXY(32, 185);
+		$pdf->Cell(15,6, utf8_decode($estado));
+
+		$pdf->SetXY(130, 145);
+		$pdf->Cell(15, 6, ('Numero exterior:'), 0 , 1);
+		$pdf->SetXY(160, 145);
+		$pdf->Cell(15,6, ($numeroexte));
+
+		$pdf->SetXY(130, 155);
+		$pdf->Cell(15, 6, ('Numero interior:'), 0 , 1);
+		$pdf->SetXY(160, 155);
+		$pdf->Cell(15,6, ($numeinte));
+
+		$pdf->SetXY(130, 165);
+		$pdf->Cell(15, 6, ('Codigo Postal:'), 0 , 1);
+		$pdf->SetXY(160, 165);
+		$pdf->Cell(15,6, ($codigopostal));
+
+		$pdf->SetFillColor(218, 216, 216);
+		$pdf->Rect(15, 185, 180, 10, 'F');
+		$pdf->SetXY(80, 186);
+		$pdf->Cell(15, 6, utf8_decode('Información del Trámite'), 0 , 1);
+
+		$pdf->SetXY(15, 195);
+		$pdf->Cell(15, 6, ('Tipo de Beca:'), 0 , 1);
+		$pdf->SetXY(40, 195);
+		$pdf->Cell(15,6, utf8_decode($tipobeca));
+
+		$pdf->SetXY(15, 205);
+		$pdf->Cell(15, 6, ('Ciclo Escolar:'), 0 , 1);
+		$pdf->SetXY(42, 205);
+		$pdf->Cell(15,6, ($cicloescolar));
+
+		$pdf->SetXY(15, 205);
+		$pdf->Cell(15, 6, ('Ciclo Escolar:'), 0 , 1);
+		$pdf->SetXY(42, 205);
+		$pdf->Cell(15,6, ($cicloescolar));
+
+		//$pdf->SetXY(15, 215);
+		//$pdf->Cell(15, 6, utf8_decode('Propedéutico:'), 0 , 1);
+		$pdf->SetXY(15, 215);
+		$pdf->Cell(15,6, ($propedeutico));
+
+		$pdf->SetXY(15, 225);
+		$pdf->Cell(15,6, ($especialidad));
+
+		$pdf->SetXY(15, 235);
+		$pdf->Cell(15, 6, ('Oferta Educativa:'), 0 , 1);
+		$pdf->SetXY(46, 235);
+		$pdf->Cell(15,6, ($maestria));
+		$pdf->Cell(15,6, ($doctorado));
+
+		$pdf->SetXY(15, 245);
+		$pdf->Cell(15, 6, utf8_decode('Tiene el beneficio de beca de otra institución u organismo:'), 0 , 1);
+		$pdf->SetXY(135, 245);
+		$pdf->Cell(15,6, ($otrabeca));
+
+		$pdf->SetXY(15, 290);
+		$pdf->Cell(15, 6, utf8_decode('Tiene otros ingresos:'), 0 , 1);
+		$pdf->SetXY(60, 255);
+		$pdf->Cell(15, 6, ($otroingreso));
+
 
 		//escribimos un contenido cualquiera
 		/*
