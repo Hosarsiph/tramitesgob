@@ -10,9 +10,10 @@
 $con = mysql_connect($bd_host, $bd_usuario, $bd_password);
 mysql_select_db($bd_base, $con);
 
-mysql_set_charset('utf8');
-//variables POST
 
+mysql_set_charset('utf8');
+
+//variables POST
   $fechatramite  = $_POST['fechatramite'];
   $curp = $_POST['curp'];
   $nombre=$_POST['nombre'];
@@ -41,12 +42,15 @@ mysql_set_charset('utf8');
   $observaciones = $_POST['observaciones'];
 
 
+
 //registra los datos del registrouser
   $sql="INSERT INTO registrobeca (folio, homoclave, fechatramite, curp, nombre, appaterno, apmaterno, telefono, extension, telefonomovil, email, vialidad, calle, numeroexte, numeinte, codigopostal, colonia, municipio, estado,tipobeca, cicloescolar, propedeutico, especialidad, maestria, doctorado, otrabeca, otroingreso, observaciones)
         VALUES ('$folio', 'CIGCET-90A-02', '$fechatramite', '$curp', '$nombre', '$appaterno', '$apmaterno', '$telefono', '$extension', '$telefonomovil', '$email', '$vialidad', '$calle', '$numeroexte', '$numeinte', '$codigopostal', '$colonia', '$municipio', '$estado', '$tipobeca', '$cicloescolar', '$propedeutico', '$especialidad', '$maestria', '$doctorado', '$otrabeca', '$otroingreso', '$observaciones')";
 mysql_query($sql,$con) or die('Error. '.mysql_error());
 
 include('consulta.php');
+
+
 
 
 ?>

@@ -22,7 +22,7 @@
             <img alt="Gob.mx" src="../images/gobmx/logos/gobmx-top.png">
           </a>
         </div>
-       
+
         <nav>
           <ul>
             <li>
@@ -33,7 +33,7 @@
             </li>
           </ul>
         </nav>
-      
+
       </div>
     </div>
     <div class="top-nav">
@@ -58,11 +58,13 @@
   </header>
 
   <link href="../css/estiloindex.css" rel="stylesheet">
+  <script type = "text/javascript" src = "validator/valida.js"></script>
+  <script type = "text/javascript" src = "jquery-1.7.1.min.js"></script>
 
   <div id="page-content" class="container">
-  <div class="body-form"> 
+  <div class="body-form">
 
-    <div class="panel-heading" id="cabecera" STYLE="background-color:#EEEEEE">  
+    <div class="panel-heading" id="cabecera" STYLE="background-color:#EEEEEE">
       <h2 align="center"><b>Centro de Investigación en Geografía y Geomática "Ing. Jorge L. Tamayo", A.C.</b></h2>
     </div>
 
@@ -73,15 +75,14 @@
     </div>
 
   <script language="JavaScript" type="text/javascript" src="ajax.js"></script>
-  <form name="nuevo_registro" action="registro.php" onsubmit="enviarDatosBeca(); return false" method="post">
   <!--<form role= "form" id="upload_form" name="nuevo_registro" method="post" enctype="multipart/form-data" action="" onsubmit="enviarDatosBeca(); return false">-->
 
   <div id = "div01" class="panel panel-default">
-    <div class="panel-body">          
+    <div class="panel-body">
         <div class="form-group">
           <label class="control-label" for="homotramite">Homoclave del Trámite:</label>
           <input class="form-control" name="homoclave" id="homotramite" placeholder="CIGGET-90A-02" type="text" disabled>
-        </div>  
+        </div>
         <!--
         <div class="form-group">
           <label class="control-label" for="fechaDOF">*Fecha de publicación del formato en el DOF:</label>
@@ -90,9 +91,10 @@
         -->
     </div>
   </div>
+  <form name="nuevo_registro" action="registro.php" onsubmit="enviarDatosBeca(); return false;" method="post">
 
   <div id = "div02" class="panel panel-default">
-    <div class="panel-body">  
+    <div class="panel-body">
      <!--
       <div class="form-group">
         <label class="control-label" for="folio">Folio:</label>
@@ -110,28 +112,28 @@
   <div class="panel-heading" STYLE="background-color:#FFFFFF">
     <h4 align="center">Datos Generales del Solicitante</h4>
   </div>
-  
-  
+
+
   <div id = "div03" class="panel panel-default">
-    <div class="panel-body">  
+    <div class="panel-body">
       <div class="form-group">
         <label class="control-label" for="curp">CURP:</label>
         <input class="form-control" name="curp" id="curp" placeholder="curp" type="text">
       </div>
 
-      
+
       <div class="form-group">
         <label class="control-label" for="nombre">Nombre(s):</label>
-        <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text">
+        <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text" onkeydown="return validarLetras(event)">
       </div>
       <div class="form-group">
         <label class="control-label" for="primerApelli">Primer Apellido:</label>
-        <input class="form-control" name="appaterno" id="primeApelli" placeholder="Apellido Paterno" type="text">
+        <input class="form-control" name="appaterno" id="primeApelli" placeholder="Apellido Paterno" type="text" onkeydown="return validarLetras(event)">
       </div>
       <div class="form-group">
         <label class="control-label" for="segunApelli">Segundo Apellido:</label>
-        <input class="form-control" name="apmaterno" id="segunApelli" placeholder="Apellido Materno" type="text">
-      </div>
+        <input class="form-control" name="apmaterno" id="segunApelli" placeholder="Apellido Materno" type="text" onkeydown="return validarLetras(event)">
+      </div
     </div>
   </div>
 
@@ -140,33 +142,34 @@
 
 
   <div id = "div04" class="panel panel-default">
-    <div class="panel-body">   
+    <div class="panel-body">
       <div class="form-group">
         <label class="control-label" for="telefono">Teléfono (lada y número):</label>
-        <input class="form-control" name="telefono" id="telefono" placeholder="Teléfono de casa" type="text">
+        <input class="form-control" name="telefono" id="telefono" placeholder="Teléfono de casa" type="text" onkeydown = "return validarNumeros(event)">
       </div>
       <div class="form-group">
         <label class="control-label" for="extencion">Extensión:</label>
-        <input class="form-control" name="extension" id="extencion" placeholder="Extension" type="text">
+        <input class="form-control" name="extension" id="extencion" placeholder="Extension" type="text" onkeydown = "return validarNumeros(event)">
       </div>
       <div class="form-group">
         <label class="control-label" for="celular">Teléfono móvil:</label>
-        <input class="form-control" name="telefonomovil" id="celular" placeholder="Teléfono celular" type="text">
+        <input class="form-control" name="telefonomovil" id="celular" placeholder="Teléfono celular" type="text" onkeydown = "return validarNumeros(event)">
       </div>
       <div class="form-group">
         <label class="control-label" for="email">Correo electrónico:</label>
         <input class="form-control" name="email" id="email" placeholder="ejemplo: nombre@gmail.com" type="text">
+        <div id = "mensaje1" class = "errores">Dame un e-mail correcto</div>
       </div>
     </div>
   </div>
-  
+
   <div class="panel-body">
   <div class="panel-heading" STYLE="background-color:#EEEEEE">
     <h4 align="center">Domicilio del Solicitante</h4>
-  </div>  
+  </div>
 
   <div id= "div05" class="panel panel-default">
-    <div class="panel-body">  
+    <div class="panel-body">
       <div class="form-group">
         <label class="control-label" for="tipoViali">Tipo de vialidad:</label>
         <input class="form-control" name="vialidad" id="tipoViali" placeholder="(Ej. Avenida, Boulevard, Calle, Carretera, Camino, Privada, Terracería, etc)" type="text">
@@ -192,7 +195,7 @@
         <label class="control-label" for="nombColonia">Nombre de la colonia o asentamiento humano:</label>
         <input class="form-control" name="colonia" id="nombColonia" placeholder="nombre de la colionia" type="text">
       </div>
-      
+
       <div class="form-group">
         <label class="control-label" for="nombMuni">Nombre del Municipio o Delegación:</label>
         <input class="form-control" name="municipio" id="nombMuni" placeholder="nombre del municipio" type="text">
@@ -204,7 +207,11 @@
     </div>
   </div>
   </div>
-  
+
+  <!-- lista Col.-Muni -->
+
+  <!-- fin lista Col.-Muni -->
+
   <div class="panel-body">
     <div id= "divhd" class="panel-heading" STYLE="background-color:#EEEEEE">
       <h4 align="center">Información del Trámite</h4>
@@ -214,13 +221,13 @@
   <div id="div06" class="panel panel-default">
     <div class="panel panel-default">
     <div class="panel-heading" align="center">Nivel del posgrado en GEOMÁTICA para el que solicita BECA</div>
-      <div class="panel-body">        
-      
+      <div class="panel-body">
+
           <div class="form-group">
             <label class="control-label" for="tipoBeca">Tipo de Beca:</label>
             <br>
             <label> Manutención
-            <input type="checkbox" value="manutencion" name="tipobeca"> 
+            <input type="checkbox" value="manutencion" name="tipobeca">
             </label>
           </div>
           <div class="form-group">
@@ -230,19 +237,19 @@
 
           <div class="form-group">
             <label>Propedéutico
-            <input type="checkbox" value="propedeutico" name="propedeutico"> 
+            <input type="checkbox" value="propedeutico" name="propedeutico">
             </label>
           </div>
 
           <div class="form-group">
             <label>Especialidad
-            <input type="checkbox" value="especialidad" name="especialidad"> 
-            </label> 
+            <input type="checkbox" value="especialidad" name="especialidad">
+            </label>
           </div>
-      </div> 
+      </div>
 
 
-        
+
 
       <div class="form-group">
         <script type="text/javascript">
@@ -251,26 +258,26 @@
                 if (id == "escoje") {
                   $("#maestria").hide();
                   $("#doctorado").hide();
-                 
-                  
+
+
 
                 }
-                
+
                 if (id == "maestria") {
                   $("#maestria").show();
                   $("#doctorado").hide();
-                
-                  
+
+
 
                 }
-                
+
                 if (id == "doctorado") {
                   $("#maestria").hide();
                   $("#doctorado").show();
-                
-                  
+
+
                 }
-                
+
               }
 
           </script>
@@ -289,58 +296,58 @@
 
           </br>
               <div id="oferta">
-                
+
                   <!--<label for = "oferta_educativa">Oferta Educativa</label>-->
                   <select id="status" name="status" onChange="mostrar(this.value);">
                       <option value = "escoje">Selecciona Oferta Educativa</option>
                       <option value="maestria">Maestría</option>
                       <option value="doctorado">Doctorado</option>
                    </select>
-                 
+
               </div>
 
               <div id="maestria" class="element" style="display: none;">
                 <h2>Maestría:</h2>
                 </br>
-                    
+
                                 <div class="form-group">
-                                
-            <label class="control-label" for="maestria">Maestría:</label>       
+
+            <label class="control-label" for="maestria">Maestría:</label>
                       <label>
-                      <input type="radio" name="maestria" value="1er anioM"> 1er año
+                      <input type="radio" name="maestria" value="Maestría 1er año"> 1er año
                       </label>
                       <label>
-                      <input type="radio" name="maestria" value="2do anioM"> 2do año
+                      <input type="radio" name="maestria" value="Maestría 2do año"> 2do año
                       </label>
              </label>
-             
+
           </div>
-                      
+
               </div>
 
 
                 <div id="doctorado" class="element" style="display: none;">
                   <h2>Doctorado:</h2>
-                    
+
                           <div class="form-group">
                 <label class="control-label" for="doctorado">Doctorado:</label>
                 <label>
-                          <input type="radio" name="doctorado" value="1er anioD"> 1er año
+                          <input type="radio" name="doctorado" value="Doctorado 1er año"> 1er año
                           </label>
                           <label>
-                          <input type="radio" name="doctorado" value="2do anioD"> 2do año
+                          <input type="radio" name="doctorado" value="Doctorado 2do año"> 2do año
                           </label>
                           <label>
-                          <input type="radio" name="doctorado" value="3er anioD"> 3er año
+                          <input type="radio" name="doctorado" value="Doctorado 3er año"> 3er año
                           </label>
                           <label>
-                          <input type="radio" name="doctorado" value="4to anioD"> 4to año
+                          <input type="radio" name="doctorado" value="Doctorado 4to año"> 4to año
                 </label>
-          </div>  
-                    
-                </div> 
+          </div>
+
+                </div>
       </div>
-    
+
 
     <div  class="panel panel-default">
     <div class="panel-heading" align="center">Situación financiera</div>
@@ -349,26 +356,26 @@
       <div class="form-group">
         <label class="control-label">Tiene el beneficio de beca de otra institución u organismo:
         </label>
-       
+
         <label>
-          <input type="radio" name="otrabeca" value="1" checked="checked"> Si
+          <input type="radio" name="otrabeca" value="si" checked="checked"> Si
         </label>
         <label>
-          <input type="radio" name="otrabeca" value="0" checked="checked"> No
-        </label>  
+          <input type="radio" name="otrabeca" value="no" checked="checked"> No
+        </label>
       </div>
 
       <div class="form-group">
         <label class="control-label">Tiene otros ingresos</label>
-       
+
           <label>
-        <input type="radio" name="otroingreso" value="1" checked="checked"> Si
+        <input type="radio" name="otroingreso" value="si" checked="checked"> Si
         </label>
         <label>
-          <input type="radio" name="otroingreso" value="0" checked="checked"> No
+          <input type="radio" name="otroingreso" value="no" checked="checked"> No
         </label>
       </div>
-     
+
       </div>
     </div>
     </div>
@@ -388,14 +395,14 @@
   <div class="form-group">
     <label class="control-label" for="observaciones">Observaciones:</label>
     <textarea class="form-control" placeholder="Observaciones" name="observaciones" rows="3"></textarea>
-  </div> 
- 
+  </div>
+
   </div>
 </div>
-<button type="submit" name="Submit" value="Enviar" class="btn btn-primary">Enviar solicitud</button> 
-</div> 
-</form>
+<button type="submit" name="enviar" value="Enviar" class="btn btn-primary"  target="_blank" id  = "btnEnviar">Enviar solicitud</button>
 <div id="resultado"><?php include('consulta.php');?></div>
+</div>
+</form>
 
 <div class="panel-body"></div>
 <div id="divhd" class="panel-heading" STYLE="background-color:#EEEEEE"><h4 align="center">Terminos y Condiciones</h4></div>
@@ -404,10 +411,10 @@
     <div id = "divhd" class="panel panel-default">
       <div class="panel-body">
           <h6 align="center"><strong>Requisitos para optar y, en su caso, obtener una beca CentroGeo:</strong></h6>
-          <br>    
+          <br>
           <strong>1.</strong>  Ser ciudadano mexicano, o extranjero con calidad migratoria que le permita realizar estudios en el país, y permanecer el plazo necesario para terminar los estudios correspondientes.
           <br>
-          <strong>2.</strong>  Los aspirantes a obtener una beca del CentroGeo para el posgrado deberán de cumplir con los requisitos de ingreso establecidos en los Planes de Estudio de cada nivel. 
+          <strong>2.</strong>  Los aspirantes a obtener una beca del CentroGeo para el posgrado deberán de cumplir con los requisitos de ingreso establecidos en los Planes de Estudio de cada nivel.
           <br>
           <strong>3.</strong>  En todos los casos deberán contar con el dictamen de aceptación oficial del Comité del Programa de Posgrado, mismo que estará asentado en el Acta del Comité del Programa de Posgrado correspondiente.
           <br>
@@ -428,13 +435,13 @@
           <br>
           <strong>1.</strong>  Suscribir la documentación que formaliza la beca dentro de los plazos previstos.
           <br>
-          <strong>2.</strong>  Para alumnos del propedéutico o del posgrado en CentroGeo la dedicación exclusiva al programa (tiempo completo) en el que esté matriculado. 
+          <strong>2.</strong>  Para alumnos del propedéutico o del posgrado en CentroGeo la dedicación exclusiva al programa (tiempo completo) en el que esté matriculado.
           <br>
           <strong>3.</strong>  Informar de la obtención de algún apoyo económico adicional al otorgado por CentroGeo.
           <br>
           <strong>4.</strong>  En el posgrado, mantener calificaciones con un promedio mínimo de 8.0
           <br>
-          <strong>5.</strong>  En las becas para la realización de tesis de licenciatura, maestría o doctorado, proporcionar a la Coordinación de Posgrado o al del 
+          <strong>5.</strong>  En las becas para la realización de tesis de licenciatura, maestría o doctorado, proporcionar a la Coordinación de Posgrado o al del
           Proyecto, según sea el caso, informes semestrales sobre el desarrollo de su trabajo de tesis, avalado por su tutor, en no más de dos cuartillas.
           <br>
           <strong>6.</strong>  Cumplir con el objeto para el cual se le otorgó la beca.
@@ -460,12 +467,12 @@
 
 <br>
 
-  <!-- 
+  <!--
   #########Aqui termina la programación del contenido##########
   #########y comienza el footer de la página##############
    -->
 
-  <footer class="gobmx-footer">
+  <footer class="gobmx-footer" style = "width:100%px;">
     <div class="container">
       <div class="contact-methods">
         <div class="way about">

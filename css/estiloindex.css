@@ -34,7 +34,7 @@ h1, h2 {
 
 }
 
-/* Estilo infomación del tramite beca*/ 
+/* Estilo infomación del tramite beca*/
 
 .single_page .summary {
 	width: 655px;
@@ -128,3 +128,21 @@ left: 20px;
 	margin-right: -15px;
 	margin-left: 39px;
 }
+
+/* estilo de errores */
+.errores {
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	-o-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	background: red;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	color: #fff;
+	display: none;
+	font-size: 14px;
+	margin-top: -80px;
+	margin-left: 340px;
+	padding: 10px;
+	position: absolute;
+}
+
+/*fin estilo errores */

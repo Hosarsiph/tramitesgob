@@ -85,7 +85,7 @@
 		$pdf->SetXY(15, 105);
 		$pdf->Cell(15, 6, utf8_decode('Nombre (s):'), 0 , 1);
 		$pdf->SetXY(38, 105);
-		$pdf->Cell(15,6, $nombre);
+		$pdf->Cell(15,6, utf8_decode($nombre));
 
 		$pdf->SetXY(15, 115);
 		$pdf->Cell(15, 6, utf8_decode('Apellido Paterno:'), 0 , 1);
@@ -96,6 +96,26 @@
 		$pdf->Cell(15, 6, utf8_decode('Apellido Materno:'), 0 , 1);
 		$pdf->SetXY(48, 125);
 		$pdf->Cell(15,6, utf8_decode($apmaterno));
+
+		$pdf->SetXY(130, 97);
+		$pdf->Cell(15, 6, utf8_decode('Telefono:'), 0 , 1);
+		$pdf->SetXY(160, 97);
+		$pdf->Cell(15,6, ($telefono));
+
+		$pdf->SetXY(130, 107);
+		$pdf->Cell(15, 6, utf8_decode('Extensión:'), 0 , 1);
+		$pdf->SetXY(160, 107);
+		$pdf->Cell(15,6, ($extension));
+
+		$pdf->SetXY(130, 117);
+		$pdf->Cell(15, 6, utf8_decode('Celular:'), 0 , 1);
+		$pdf->SetXY(160, 117);
+		$pdf->Cell(15,6, ($telefonomovil));
+
+		$pdf->SetXY(130, 127);
+		$pdf->Cell(15, 6, utf8_decode('e-mail:'), 0 , 1);
+		$pdf->SetXY(143, 127);
+		$pdf->Cell(15,6, ($email));
 
 
 		$pdf->SetFillColor(218, 216, 216);
@@ -158,10 +178,6 @@
 		$pdf->SetXY(42, 205);
 		$pdf->Cell(15,6, ($cicloescolar));
 
-		$pdf->SetXY(15, 205);
-		$pdf->Cell(15, 6, ('Ciclo Escolar:'), 0 , 1);
-		$pdf->SetXY(42, 205);
-		$pdf->Cell(15,6, ($cicloescolar));
 
 		//$pdf->SetXY(15, 215);
 		//$pdf->Cell(15, 6, utf8_decode('Propedéutico:'), 0 , 1);
@@ -174,15 +190,17 @@
 		$pdf->SetXY(15, 235);
 		$pdf->Cell(15, 6, ('Oferta Educativa:'), 0 , 1);
 		$pdf->SetXY(46, 235);
-		$pdf->Cell(15,6, ($maestria));
-		$pdf->Cell(15,6, ($doctorado));
+		$pdf->Cell(15,6, utf8_decode($maestria));
+		$pdf->Cell(15,6, utf8_decode($doctorado));
 
-		$pdf->SetXY(15, 245);
+		$pdf->AddPage();
+
+		$pdf->SetXY(15, 40);
 		$pdf->Cell(15, 6, utf8_decode('Tiene el beneficio de beca de otra institución u organismo:'), 0 , 1);
 		$pdf->SetXY(135, 245);
 		$pdf->Cell(15,6, ($otrabeca));
 
-		$pdf->SetXY(15, 290);
+		$pdf->SetXY(15, 50);
 		$pdf->Cell(15, 6, utf8_decode('Tiene otros ingresos:'), 0 , 1);
 		$pdf->SetXY(60, 255);
 		$pdf->Cell(15, 6, ($otroingreso));
