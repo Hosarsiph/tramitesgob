@@ -195,7 +195,7 @@
         <label class="control-label" for="nombColonia">Nombre de la colonia o asentamiento humano:</label>
         <input class="form-control" name="colonia" id="nombColonia" placeholder="nombre de la colionia" type="text">
       </div>
-
+      <!--
       <div class="form-group">
         <label class="control-label" for="nombMuni">Nombre del Municipio o Delegación:</label>
         <input class="form-control" name="municipio" id="nombMuni" placeholder="nombre del municipio" type="text">
@@ -204,6 +204,61 @@
         <label class="control-label" for="nombEstado">Nombre del Estado o Distrito Federal:</label>
         <input class="form-control" name="estado" id="nombEstado" placeholder="nombre del Estado o Distrito Federal" type="text">
       </div>
+    -->
+
+    <!-- primera etapa de select dependientes -->
+    <div class = "from-group">
+    <script type="text/javascript" src="select_depende/select_dependientes_3_niveles.js"></script>
+     <link rel="stylesheet" type="text/css" href="select_depende/select_dependientes_3_niveles.css">
+      <div id="demo" style="width:600px;">
+
+        <div id="demoMed">
+          <select disabled="disabled" name="select2" id="select2">
+            <option value="0">Municipio...</option>
+          </select>
+        </div>
+          <div id="demoIzq" ><?php include('generaSelect.php'); generaSelect(); ?></div>
+
+          <select class="selectpicker" data-style="btn-primary" name="select1" id="select1" onchange="cargaContenido(this.id)">
+                <option value="0">Estado</option>
+                <option value="1">Aguascalientes</option>
+                <option value="2">Bajacalifornia</option>
+                <option value="3">Bajacalifornia Sur</option>
+                <option value="4">Campeche</option>
+                <option value="5">Chiapas</option>
+                <option value="6">Chihuahua</option>
+                <option value="7">Coahuila</option>
+                <option value="8">Colima</option>
+                <option value="9">Distrito Federal</option>
+                <option value="10">Durango</option>
+                <option value="11">Estado de México</option>
+                <option value="12">Guanajuato</option>
+                <option value="13">Guerrero</option>
+                <option value="14">Hidalgo</option>
+                <option value="15">Jalisco</option>
+                <option value="16">Michoacan</option>
+                <option value="17">Morelos</option>
+                <option value="18">Nayarit</option>
+                <option value="19">Nuevo León</option>
+                <option value="20">Oaxaca</option>
+                <option value="21">Puebla</option>
+                <option value="22">Queretaro</option>
+                <option value="23">Quintana Roo</option>
+                <option value="24">San Luis Potosin</option>
+                <option value="25">Sinaloa</option>
+                <option value="26">Sonora</option>
+                <option value="27">Tabasco</option>
+                <option value="28">Tamaulipas</option>
+                <option value="29">Tlaxcala</option>
+                <option value="30">Veracruz</option>
+                <option value="31">Yucatan</option>
+                <option value="32">Zacatecas</option>
+          </select>
+
+      </div>
+    </div>
+    <!-- fin de la etapa select dpendoentes  -->
+
     </div>
   </div>
   </div>
