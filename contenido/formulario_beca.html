@@ -81,7 +81,7 @@
     <div class="panel-body">
         <div class="form-group">
           <label class="control-label" for="homotramite">Homoclave del Trámite:</label>
-          <input class="form-control" name="homoclave" id="homotramite" placeholder="CIGGET-90A-02" type="text" disabled>
+          <input class="form-control" name="homoclave" id="homotramite" placeholder="CIGGET-90A-03" type="text" disabled>
         </div>
         <!--
         <div class="form-group">
@@ -195,7 +195,7 @@
         <label class="control-label" for="nombColonia">Nombre de la colonia o asentamiento humano:</label>
         <input class="form-control" name="colonia" id="nombColonia" placeholder="nombre de la colionia" type="text">
       </div>
-
+      <!--
       <div class="form-group">
         <label class="control-label" for="nombMuni">Nombre del Municipio o Delegación:</label>
         <input class="form-control" name="municipio" id="nombMuni" placeholder="nombre del municipio" type="text">
@@ -204,6 +204,19 @@
         <label class="control-label" for="nombEstado">Nombre del Estado o Distrito Federal:</label>
         <input class="form-control" name="estado" id="nombEstado" placeholder="nombre del Estado o Distrito Federal" type="text">
       </div>
+    -->
+
+    <!-- prueba lista div municipio estado -->
+    <div id="demo" style="width:600px;">
+      <div id="demoDer">
+        <select disabled="disabled" name="estados" id="estados">
+          <option value="0">Selecciona opci&oacute;n...</option>
+        </select>
+      </div>
+      <div id="demoIzq"><?php include('genera_estados.php') generaPaises(); ?></div>
+    </div>
+    <!-- fin municipio-estado9 -->
+
     </div>
   </div>
   </div>
