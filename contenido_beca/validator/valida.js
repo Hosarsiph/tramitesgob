@@ -1,4 +1,4 @@
-/*
+
 window.onload = function () {
 document.nuevo_registro.nombre.focus();
 document.nuevo_registro.addEventListener('submit', validarFormulario);
@@ -51,7 +51,7 @@ function validarNumeros(e) { // 1
                   te = String.fromCharCode(tecla);
                   return patron.test(te); // prueba
 }
-*/
+
 
 var expre = /^[a-zA-Z0-9_\.\.-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9\-\.]+$/;
 

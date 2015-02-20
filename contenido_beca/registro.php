@@ -45,10 +45,10 @@ mysql_set_charset('utf8');
 
 //registra los datos del registrouser
   $sql="INSERT INTO registrobeca (folio, homoclave, fechatramite, curp, nombre, appaterno, apmaterno, telefono, extension, telefonomovil, email, vialidad, calle, numeroexte, numeinte, codigopostal, colonia, municipio, estado,tipobeca, cicloescolar, propedeutico, especialidad, maestria, doctorado, otrabeca, otroingreso, observaciones)
-        VALUES ('$folio', 'CIGCET-90A-02', '$fechatramite', '$curp', '$nombre', '$appaterno', '$apmaterno', '$telefono', '$extension', '$telefonomovil', '$email', '$vialidad', '$calle', '$numeroexte', '$numeinte', '$codigopostal', '$colonia', '$municipio', '$estado', '$tipobeca', '$cicloescolar', '$propedeutico', '$especialidad', '$maestria', '$doctorado', '$otrabeca', '$otroingreso', '$observaciones')";
+        VALUES ('$folio', 'CIGCET-000-003', '$fechatramite', '$curp', '$nombre', '$appaterno', '$apmaterno', '$telefono', '$extension', '$telefonomovil', '$email', '$vialidad', '$calle', '$numeroexte', '$numeinte', '$codigopostal', '$colonia', '$municipio', '$estado', '$tipobeca', '$cicloescolar', '$propedeutico', '$especialidad', '$maestria', '$doctorado', '$otrabeca', '$otroingreso', '$observaciones')";
 mysql_query($sql,$con) or die('Error. '.mysql_error());
 
-include('consulta.php');
+include('info_beca.php');
 
 
 
