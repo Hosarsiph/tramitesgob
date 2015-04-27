@@ -1,4 +1,4 @@
-
+/*
 window.onload = function () {
 document.nuevo_registro.nombre.focus();
 document.nuevo_registro.addEventListener('submit', validarFormulario);
@@ -34,7 +34,7 @@ function validarLetras(e) { // 1
             return patron.test(te); // prueba de patron
 }
 
-
+*/
 function validarNumeros(e) { // 1
   tecla = (document.all) ? e.keyCode : e.which; // 2
   if (tecla==8) return true; // backspace

@@ -13,6 +13,7 @@
   </head>
 
   <body>
+
     <!-- Header -->
       <header class="gobmx-header">
     <div class="network-nav">
@@ -66,6 +67,9 @@
 
     <div class="panel-heading" id="cabecera" STYLE="background-color:#EEEEEE">
       <h2 align="center"><b>Centro de Investigación en Geografía y Geomática "Ing. Jorge L. Tamayo", A.C.</b></h2>
+      <div class = "logo_geo">
+        <img alt="CentroGeo" src="../images/gobmx/logos/centrogeo.png">
+      </div>
     </div>
 
 
@@ -118,21 +122,21 @@
     <div class="panel-body">
       <div class="form-group">
         <label class="control-label" for="curp">CURP:</label>
-        <input class="form-control" name="curp" id="curp" placeholder="curp" type="text">
+        <input class="form-control" name="curp" id="curp" placeholder="curp" type="text" required>
       </div>
 
 
       <div class="form-group">
         <label class="control-label" for="nombre">Nombre(s):</label>
-        <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text" onkeydown="return validarLetras(event)">
+        <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text" required onkeydown="return validarLetras(event)">
       </div>
       <div class="form-group">
         <label class="control-label" for="primerApelli">Primer Apellido:</label>
-        <input class="form-control" name="appaterno" id="primeApelli" placeholder="Apellido Paterno" type="text" onkeydown="return validarLetras(event)">
+        <input class="form-control" name="appaterno" id="primeApelli" placeholder="Apellido Paterno" type="text" required onkeydown="return validarLetras(event)">
       </div>
       <div class="form-group">
         <label class="control-label" for="segunApelli">Segundo Apellido:</label>
-        <input class="form-control" name="apmaterno" id="segunApelli" placeholder="Apellido Materno" type="text" onkeydown="return validarLetras(event)">
+        <input class="form-control" name="apmaterno" id="segunApelli" placeholder="Apellido Materno" type="text" required onkeydown="return validarLetras(event)">
       </div
     </div>
   </div>
@@ -145,19 +149,19 @@
     <div class="panel-body">
       <div class="form-group">
         <label class="control-label" for="telefono">Teléfono (lada y número):</label>
-        <input class="form-control" name="telefono" id="telefono" placeholder="Teléfono de casa" type="text" onkeydown = "return validarNumeros(event)">
+        <input class="form-control" name="telefono" id="telefono" placeholder="Teléfono de casa" type="text" required onkeydown = "return validarNumeros(event)">
       </div>
       <div class="form-group">
         <label class="control-label" for="extencion">Extensión:</label>
-        <input class="form-control" name="extension" id="extencion" placeholder="Extension" type="text" onkeydown = "return validarNumeros(event)">
+        <input class="form-control" name="extension" id="extencion" placeholder="Extension" type="text" required onkeydown = "return validarNumeros(event)">
       </div>
       <div class="form-group">
         <label class="control-label" for="celular">Teléfono móvil:</label>
-        <input class="form-control" name="telefonomovil" id="celular" placeholder="Teléfono celular" type="text" onkeydown = "return validarNumeros(event)">
+        <input class="form-control" name="telefonomovil" id="celular" placeholder="Teléfono celular" type="text" required onkeydown = "return validarNumeros(event)">
       </div>
       <div class="form-group">
         <label class="control-label" for="email">Correo electrónico:</label>
-        <input class="form-control" name="email" id="email" placeholder="ejemplo: nombre@gmail.com" type="text">
+        <input class="form-control" name="email" id="email" placeholder="ejemplo: nombre@gmail.com" type="text" required>
         <div id = "mensaje1" class = "errores">Dame un e-mail correcto</div>
       </div>
     </div>
@@ -172,16 +176,16 @@
     <div class="panel-body">
       <div class="form-group">
         <label class="control-label" for="tipoViali">Tipo de vialidad:</label>
-        <input class="form-control" name="vialidad" id="tipoViali" placeholder="(Ej. Avenida, Boulevard, Calle, Carretera, Camino, Privada, Terracería, etc)" type="text">
+        <input class="form-control" name="vialidad" id="tipoViali" placeholder="(Ej. Avenida, Boulevard, Calle, Carretera, Camino, Privada, Terracería, etc)" type="text" required>
       </div>
       <div class="form-group">
         <label class="control-label" for="nombreCalle">Nombre de la calle:</label>
-        <input class="form-control" name="calle" id="nombreCalle" placeholder="nombre de la calle" type="text">
+        <input class="form-control" name="calle" id="nombreCalle" placeholder="nombre de la calle" type="text" required>
       </div>
 
       <div class="form-group">
         <label class="control-label" for="numExte">Número exterior:</label>
-        <input class="form-control" name="numeroexte" id="numExte" placeholder="número exterior" type="text">
+        <input class="form-control" name="numeroexte" id="numExte" placeholder="número exterior" type="text" required>
       </div>
         <div class="form-group">
         <label class="control-label" for="numInte">Número interior:</label>
@@ -189,11 +193,11 @@
       </div>
       <div class="form-group">
         <label class="control-label" for="codPostal">Código postal:</label>
-        <input class="form-control" name="codigopostal" id="codPostal" placeholder="código postal" type="text">
+        <input class="form-control" name="codigopostal" id="codPostal" placeholder="código postal" type="text" required>
       </div>
       <div class="form-group">
         <label class="control-label" for="nombColonia">Nombre de la colonia o asentamiento humano:</label>
-        <input class="form-control" name="colonia" id="nombColonia" placeholder="nombre de la colionia" type="text">
+        <input class="form-control" name="colonia" id="nombColonia" placeholder="nombre de la colionia" type="text" required>
       </div>
       <!--
       <div class="form-group">
