@@ -152,3 +152,15 @@ left: 20px;
 	margin-top: 0px;
 	margin-left: 470px;
 }
+
+#status {
+	width: 234px;
+}
+
+
+
+input:required:valid {
+
+border: 1px solid red;
+
+}

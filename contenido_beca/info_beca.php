@@ -1,3 +1,3 @@
 <?php
-echo("Datos guaradaos");
+echo("Datos guaradados");
 ?>

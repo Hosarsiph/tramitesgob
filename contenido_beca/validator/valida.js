@@ -18,7 +18,7 @@ todoCorrecto=false;
 }
 if (todoCorrecto ==true) {formulario.submit();}
 }
-
+*/
 
 function validarLetras(e) { // 1
   tecla = (document.all) ? e.keyCode : e.which;
@@ -34,7 +34,7 @@ function validarLetras(e) { // 1
             return patron.test(te); // prueba de patron
 }
 
-*/
+
 function validarNumeros(e) { // 1
   tecla = (document.all) ? e.keyCode : e.which; // 2
   if (tecla==8) return true; // backspace
