@@ -4,7 +4,11 @@ use tramitesgeo;
 
 create table registrobeca (
 
-folio int auto_increment not null,
+#ultimo recurso
+id_beca int auto_increment not null,
+
+folio int not null,
+#folio int auto_increment not null,
 homoclave varchar(13) not null,
 fechatramite date not null,
 curp varchar (12) not null,
@@ -32,14 +36,16 @@ doctorado varchar (20)not null,
 otrabeca varchar(2) not null,
 otroingreso varchar(2) not null,
 observaciones varchar(200)not null,
-primary key (folio)
-);
+
+#primary key (folio)
+primary key (id_beca)
+) ENGINE=InnoDB;
 
 CREATE TABLE select_1 (
   id int(2) NOT NULL default '0',
   opcion varchar(255) NOT NULL default '',
   PRIMARY KEY  (id)
-) ENGINE=MyISAM;
+) ENGINE=InnoDB;
 
 INSERT INTO select_1 (id, opcion) VALUES
 (1, ' 1'),
@@ -52,7 +58,7 @@ CREATE TABLE select_2 (
   opcion varchar(255) NOT NULL default '',
   relacion int(2) NOT NULL default '0',
   PRIMARY KEY  (id)
-) ENGINE=MyISAM;
+) ENGINE=InnoDB;
 
 INSERT INTO select_2 (id, opcion, relacion) VALUES
 

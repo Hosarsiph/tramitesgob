@@ -156,11 +156,3 @@ left: 20px;
 #status {
 	width: 234px;
 }
-
-
-
-input:required:valid {
-
-border: 1px solid red;
-
-}

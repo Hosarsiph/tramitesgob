@@ -52,18 +52,3 @@ function validarNumeros(e) { // 1
                   return patron.test(te); // prueba
 }
 
-
-var expre = /^[a-zA-Z0-9_\.\.-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9\-\.]+$/;
-
-  $(document).ready(function() {
-    $("#btnEnviar").click(function() {
-      var correo = $("#email").val();
-
-        if (correo == "" || !expre.test(correo)) {
-          $("#mensaje1").fadeIn();
-          return false;
-
-        }
-    });
-
-  });
